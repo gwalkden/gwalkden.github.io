@@ -1,0 +1,155 @@
+body {
+	font-family: Georgia;
+	font-size: 16px;
+	color: #FFF;
+	background: #000;
+}
+
+h1 {
+	color: #9CF;
+}
+
+h2 {
+	color: #36C;
+}
+
+a {
+	color: #9CF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #36C;
+}
+
+div {
+	background: #666;}
+
+div#main {
+	padding: 10px 10px 10px 10px;	margin:0 auto;
+}
+
+div#menu {
+	line-height: 1em;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: 16px;
+	padding: 0 20px 0 20px;
+}
+
+div#menu ul { 
+	float:left;
+	list-style: none; 
+	margin:0; 
+	padding: 0px; 
+	}
+
+div#menu li { 
+	display: block; 
+	float: left; 
+	}
+
+div#content li { 
+	margin-bottom:0.4em; 
+	}
+
+div#content li ul { 
+	margin-top:0.4em; 
+	}
+
+div#menu a { 
+	display: block; 
+/*
+	float: left; 
+*/
+	text-decoration: none; 
+	font-weight: bold;
+	background-color:#666; 
+	padding:4px 10px 4px 10px; 
+	border-right: 1px solid #000; 
+	border-top: 1px solid #000; 
+}
+div#menu a:hover { 
+	display: block; 
+	float: left; 
+	text-decoration: none;  
+	background-color: #EDEEEC; 
+}
+
+/* Commented backslash hack hides rule from IE5-Mac \*/	
+div#menu li a { float: none }
+/* End IE5-Mac hack */ 
+/*end of tabbed nav bar*/
+
+div#menu a.first {
+	border-left: 1px solid #000; 
+	border-right: 1px solid #000; 
+	border-top: 1px solid #000; 
+}
+
+div#menu a.current { 
+	background-color: #333;
+}
+
+div#content {
+	padding: 10px 10px 10px 10px;	border: 1px solid #000;
+	text-align: left;	background: #333;}
+
+div.right {
+	float: right;
+	width: 320px;
+	text-align: left;	background: #333;}
+
+small {
+	font-size: 12px;
+}
+
+img {
+	border: none;
+}
+
+img.left {	float: left;	clear: left;	margin-left: 0;	margin-right: 10px;}
+
+img.right {	float: right;	clear: right;	margin-left: 10px;	margin-right: 0;
+	margin-bottom: 10px;}
+
+table {
+	margin: 0 0 1em 0;
+	width: 100%;
+	text-align: left;
+}
+
+table td {
+	padding: 0.3em 0.4em 0.2em 0.4em;
+	border:1px solid #F90;
+}
+
+table th {
+	padding: 0.3em 0.4em 0.2em 0.4em;
+	border:1px solid #F90;
+	font-weight: bold;
+}
+
+td.center {
+	text-align: center;
+}
+
+a.pdf {
+	background: url(b/pdf.gif) no-repeat 0 0;
+	padding: 0 0 0 20px;
+}
+
+a.wayback {
+	background: url(b/wayback.png) no-repeat 0 0;
+	padding: 0 0 0 20px;
+}
+
+a.xls {
+	background: url(b/xls.gif) no-repeat 0 0;
+	padding: 0 0 0 20px;
+}
+
+a.pptx {
+	background: url(b/pptx.gif) no-repeat 0 0;
+	padding: 0 0 0 20px;
+}
