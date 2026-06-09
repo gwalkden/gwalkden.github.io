@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../style.css" type="text/css" media="all" />
+
+<title>George Walkden :: LELA10172 Resources</title>
+<meta name="description" content="Resources for Paper LELA10172 (Introduction to Historical Linguistics), 2012." />
+<meta name="keywords" content="lela10172, historical, linguistics" />
+
+	<style type="text/css">
+	#dhtmlgoodies_dragDropContainer{	/* Main container for this script */
+		width:280px;
+		height:310px;
+		background-color:#333;
+		-moz-user-select:none;
+	}
+	#dhtmlgoodies_dragDropContainer ul{	/* General rules for all ul */
+		margin-top:0px;
+		margin-left:0px;
+		margin-bottom:0px;
+		padding:2px;
+	}
+	
+	#dhtmlgoodies_dragDropContainer li,#dragContent li,li#indicateDestination{	/* Movable items, i.e. LI */
+		list-style-type:none;
+		height:15px;
+		background-color:#00F;
+		border:1px solid #000;
+		padding:2px;
+		margin-bottom:2px;
+		cursor:pointer;
+		font-size:13px;
+		line-height:15px;
+	}
+	
+	li#indicateDestination{	/* Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
+		border:1px dotted #600;	
+		background-color:#FFF;
+	}
+	
+	#dhtmlgoodies_dragDropContainer ul li.correctAnswer{	/* Correctly moved item */
+		background-color:#00F;
+		color:#FFF;
+	}
+	#dhtmlgoodies_dragDropContainer ul li.wrongAnswer{	/* Item moved to wrong box */
+		background-color:#00F;
+		color:#FFF;
+	}
+	
+	
+	/* LEFT COLUMN CSS */
+	div#dhtmlgoodies_listOfItems{	/* Left column "Available students" */
+		
+		float:left;
+		padding-left:10px;
+		padding-right:10px;
+		background-color:#333;
+		
+		/* CSS HACK */
+		width: 180px;	/* IE 5.x */
+		width/* */:/**/160px;	/* Other browsers */
+		width: /**/160px;
+				
+	}
+	#dhtmlgoodies_listOfItems ul{	/* Left(Sources) column ul */
+		height:280px;	
+
+	}
+		
+	div#dhtmlgoodies_listOfItems div{
+		border:1px solid #999;
+	}
+	div#dhtmlgoodies_listOfItems div ul{	/* Left column ul */
+		margin-left:10px;	/* Space at the left of list - the arrow will be positioned there */
+	}
+	#dhtmlgoodies_listOfItems div p{	/* Heading above left column */
+		margin:0px;	
+		font-weight:bold;
+		padding-left:12px;
+		background-color:#317082;	
+		color:#FFF;
+		margin-bottom:5px;
+	}
+	/* END LEFT COLUMN CSS */
+	
+	#dhtmlgoodies_dragDropContainer .mouseover{	/* Mouse over effect DIV box in right column */
+		background-color:#E2EBED;
+		border:1px solid #317082;
+	}
+	
+	/* Start main container CSS */
+	
+	div#dhtmlgoodies_mainContainer{	/* Right column DIV */
+		width:100px;
+		float:left;	
+		background-color:#333;
+	}
+	#dhtmlgoodies_mainContainer div{	/* Parent div of small boxes */
+		float:left;
+		margin-right:10px;
+		margin-bottom:10px;
+		margin-top:0px;
+		border:1px solid #999;
+
+		/* CSS HACK */
+		width: 172px;	/* IE 5.x */
+		width/* */:/**/170px;	/* Other browsers */
+		width: /**/170px;
+				
+	}
+	#dhtmlgoodies_mainContainer div ul{
+		margin-left:10px;
+	}
+	
+	#dhtmlgoodies_mainContainer div p{	/* Heading above small boxes */
+		margin:0px;
+		padding:0px;
+		padding-left:12px;
+		font-weight:bold;
+		background-color:#317082;	
+		color:#FFF;	
+		margin-bottom:5px;
+	}
+	
+	#dhtmlgoodies_mainContainer ul{	/* Small box in right column ,i.e ul */
+		width:152px;
+		height:80px;	
+		border:0px;	
+		margin-bottom:0px;
+		overflow:hidden;
+		
+	}
+	
+	#dragContent{	/* Drag container */
+		position:absolute;
+		width:150px;
+		height:15px;
+		display:none;
+		margin:0px;
+		padding:0px;
+		z-index:2000;
+	}
+
+	#dragDropIndicator{	/* DIV for the small arrow */
+		position:absolute;
+		width:7px;
+		height:10px;
+		display:none;
+		z-index:1000;
+		margin:0px;
+		padding:0px;
+	}
+	</style>
+	<style type="text/css" media="print">
+	div#dhtmlgoodies_listOfItems{
+		display:none;
+	}
+	body{
+		background-color:#FFF;
+	}
+	img{
+		display:none;
+	}
+	#dhtmlgoodies_dragDropContainer{
+		border:0px;
+		width:100%;
+	}
+	</style>	
+	<script type="text/javascript">
+	<!--
+	/************************************************************************************************************
+	Copyright (C) December 2005  DTHMLGoodies.com, Alf Magne Kalleland
+
+	This library is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Lesser General Public
+	License as published by the Free Software Foundation; either
+	version 2.1 of the License, or (at your option) any later version.
+
+	This library is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	Lesser General Public License for more details.
+
+	You should have received a copy of the GNU Lesser General Public
+	License along with this library; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+	Dhtmlgoodies.com., hereby disclaims all copyright interest in this script
+	written by Alf Magne Kalleland.
+
+	Alf Magne Kalleland, 2010
+	Owner of DHTMLgoodies.com
+
+	************************************************************************************************************/
+		
+	/* VARIABLES YOU COULD MODIFY */
+	var boxSizeArray = [1,1,1,1,1];	// Array indicating how many items there is rooom for in the right column ULs
+	
+	var arrow_offsetX = -5;	// Offset X - position of small arrow
+	var arrow_offsetY = 0;	// Offset Y - position of small arrow
+	
+	var arrow_offsetX_firefox = -6;	// Firefox - offset X small arrow
+	var arrow_offsetY_firefox = -13; // Firefox - offset Y small arrow
+	
+	var verticalSpaceBetweenListItems = 3;	// Pixels space between one <li> and next	
+											// Same value or higher as margin bottom in CSS for #dhtmlgoodies_dragDropContainer ul li,#dragContent li
+	
+											
+	var initShuffleItems = true;	// Shuffle items before staring
+
+	var indicateDestionationByUseOfArrow = true;	// Display arrow to indicate where object will be dropped(false = use rectangle)
+	
+	var lockedAfterDrag = false;	/* Lock items after they have been dragged, i.e. the user get's only one shot for the correct answer */
+	
+	
+	/* END VARIABLES YOU COULD MODIFY */
+	
+	var dragDropTopContainer = false;
+	var dragTimer = -1;
+	var dragContentObj = false;
+	var contentToBeDragged = false;	// Reference to dragged <li>
+	var contentToBeDragged_src = false;	// Reference to parent of <li> before drag started
+	var contentToBeDragged_next = false; 	// Reference to next sibling of <li> to be dragged
+	var destinationObj = false;	// Reference to <UL> or <LI> where element is dropped.
+	var dragDropIndicator = false;	// Reference to small arrow indicating where items will be dropped
+	var ulPositionArray = new Array();
+	var mouseoverObj = false;	// Reference to highlighted DIV
+	
+	var MSIE = navigator.userAgent.indexOf('MSIE')>=0?true:false;
+	var navigatorVersion = navigator.appVersion.replace(/.*?MSIE (\d\.\d).*/g,'$1')/1;
+	var destinationBoxes = new Array();
+	var indicateDestinationBox = false;
+		
+	function getTopPos(inputObj)
+	{		
+	  var returnValue = inputObj.offsetTop;
+	  while((inputObj = inputObj.offsetParent) != null){
+	  	if(inputObj.tagName!='HTML')returnValue += inputObj.offsetTop;
+	  }
+	  return returnValue;
+	}
+	
+	function getLeftPos(inputObj)
+	{
+	  var returnValue = inputObj.offsetLeft;
+	  while((inputObj = inputObj.offsetParent) != null){
+	  	if(inputObj.tagName!='HTML')returnValue += inputObj.offsetLeft;
+	  }
+	  return returnValue;
+	}
+		
+	function cancelEvent()
+	{
+		return false;
+	}
+	function initDrag(e)	// Mouse button is pressed down on a LI
+	{
+		if(document.all)e = event;
+		if(lockedAfterDrag && this.parentNode.id!='allItems')return;
+		
+		var st = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+		var sl = Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
+		
+		dragTimer = 0;
+		dragContentObj.style.left = e.clientX + sl + 'px';
+		dragContentObj.style.top = e.clientY + st + 'px';
+		contentToBeDragged = this;
+		contentToBeDragged_src = this.parentNode;
+		contentToBeDragged_next = false;
+		if(this.nextSibling){
+			contentToBeDragged_next = this.nextSibling;
+			if(!this.tagName && contentToBeDragged_next.nextSibling)contentToBeDragged_next = contentToBeDragged_next.nextSibling;
+		}
+		timerDrag();
+		return false;
+	}
+	
+	function everythingIsCorrect()
+	{
+		alert('Congratulations! This is the correct ordering.');		
+	}
+	
+	
+	function timerDrag()
+	{
+		if(dragTimer>=0 && dragTimer<10){
+			dragTimer++;
+			setTimeout('timerDrag()',10);
+			return;
+		}
+		if(dragTimer==10){
+			dragContentObj.style.display='block';
+			dragContentObj.appendChild(contentToBeDragged);
+		}
+	}
+	
+	function moveDragContent(e)
+	{
+		if(dragTimer<10){
+			if(contentToBeDragged){
+				if(contentToBeDragged_next){
+					contentToBeDragged_src.insertBefore(contentToBeDragged,contentToBeDragged_next);
+				}else{
+					contentToBeDragged_src.appendChild(contentToBeDragged);
+				}	
+			}
+			return;
+		}
+		if(document.all)e = event;
+		var st = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+		var sl = Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
+		
+		
+		dragContentObj.style.left = e.clientX + sl + 'px';
+		dragContentObj.style.top = e.clientY + st + 'px';
+		
+		if(mouseoverObj)mouseoverObj.className='';
+		destinationObj = false;
+		dragDropIndicator.style.display='none';
+		if(indicateDestinationBox)indicateDestinationBox.style.display='none';
+		var x = e.clientX + sl;
+		var y = e.clientY + st;
+		var width = dragContentObj.offsetWidth;
+		var height = dragContentObj.offsetHeight;
+		
+		var tmpOffsetX = arrow_offsetX;
+		var tmpOffsetY = arrow_offsetY;
+		if(!document.all){
+			tmpOffsetX = arrow_offsetX_firefox;
+			tmpOffsetY = arrow_offsetY_firefox;
+		}
+
+		for(var no=0;no<ulPositionArray.length;no++){
+			var ul_leftPos = ulPositionArray[no]['left'];	
+			var ul_topPos = ulPositionArray[no]['top'];	
+			var ul_height = ulPositionArray[no]['height'];
+			var ul_width = ulPositionArray[no]['width'];
+			
+			if((x+width) > ul_leftPos && x<(ul_leftPos + ul_width) && (y+height)> ul_topPos && y<(ul_topPos + ul_height)){
+				var noExisting = ulPositionArray[no]['obj'].getElementsByTagName('LI').length;
+				if(indicateDestinationBox && indicateDestinationBox.parentNode==ulPositionArray[no]['obj'])noExisting--;
+				if(noExisting<boxSizeArray[no-1] || no==0){
+					dragDropIndicator.style.left = ul_leftPos + tmpOffsetX + 'px';
+					var subLi = ulPositionArray[no]['obj'].getElementsByTagName('LI');
+					for(var liIndex=0;liIndex<subLi.length;liIndex++){
+						var tmpTop = getTopPos(subLi[liIndex]);
+						if(!indicateDestionationByUseOfArrow){
+							if(y<tmpTop){
+								destinationObj = subLi[liIndex];
+								indicateDestinationBox.style.display='block';
+								subLi[liIndex].parentNode.insertBefore(indicateDestinationBox,subLi[liIndex]);
+								break;
+							}
+						}else{							
+							if(y<tmpTop){
+								destinationObj = subLi[liIndex];
+								dragDropIndicator.style.top = tmpTop + tmpOffsetY - Math.round(dragDropIndicator.clientHeight/2) + 'px';
+								dragDropIndicator.style.display='block';
+								break;
+							}	
+						}					
+					}
+					
+					if(!indicateDestionationByUseOfArrow){
+						if(indicateDestinationBox.style.display=='none'){
+							indicateDestinationBox.style.display='block';
+							ulPositionArray[no]['obj'].appendChild(indicateDestinationBox);
+						}
+						
+					}else{
+						if(subLi.length>0 && dragDropIndicator.style.display=='none'){
+							dragDropIndicator.style.top = getTopPos(subLi[subLi.length-1]) + subLi[subLi.length-1].offsetHeight + tmpOffsetY + 'px';
+							dragDropIndicator.style.display='block';
+						}
+						if(subLi.length==0){
+							dragDropIndicator.style.top = ul_topPos + arrow_offsetY + 'px'
+							dragDropIndicator.style.display='block';
+						}
+					}
+					
+					if(!destinationObj)destinationObj = ulPositionArray[no]['obj'];
+					mouseoverObj = ulPositionArray[no]['obj'].parentNode;
+					mouseoverObj.className='mouseover';
+					return;
+				}
+			}
+		}
+	}
+	
+	function checkAnswers()
+	{
+		
+		for(var no=0;no<destinationBoxes.length;no++){
+			var subLis = destinationBoxes[no].getElementsByTagName('LI');
+			if(subLis.length<boxSizeArray[no])return;	
+			
+			for(var no2=0;no2<subLis.length;no2++){
+				if(subLis[no2].className=='wrongAnswer')return;
+			}		
+		}
+		
+		everythingIsCorrect();
+		
+		
+	}
+	
+	
+	/* End dragging 
+	Put <LI> into a destination or back to where it came from.
+	*/	
+	function dragDropEnd(e)
+	{
+		if(dragTimer==-1)return;
+		if(dragTimer<10){
+			dragTimer = -1;
+			return;
+		}
+		dragTimer = -1;
+		if(document.all)e = event;		
+		if(destinationObj){
+			var groupId = contentToBeDragged.getAttribute('groupId');
+			if(!groupId)groupId = contentToBeDragged.groupId;
+			
+			var destinationToCheckOn = destinationObj;
+			if(destinationObj.tagName!='UL'){
+				destinationToCheckOn = destinationObj.parentNode;
+			}
+			
+			var answerCheck = false;
+			if(groupId == destinationToCheckOn.id){
+				contentToBeDragged.className = 'correctAnswer';		
+				answerCheck=true;	
+			}else{
+				contentToBeDragged.className = 'wrongAnswer';
+			}
+			if(destinationObj.id=='allItems' || destinationObj.parentNode.id=='allItems')contentToBeDragged.className='';
+			
+			
+			if(destinationObj.tagName=='UL'){
+				destinationObj.appendChild(contentToBeDragged);
+			}else{
+				destinationObj.parentNode.insertBefore(contentToBeDragged,destinationObj);
+			}
+			mouseoverObj.className='';
+			destinationObj = false;
+			dragDropIndicator.style.display='none';
+			if(indicateDestinationBox){
+				indicateDestinationBox.style.display='none';
+				document.body.appendChild(indicateDestinationBox);
+			}
+						
+			contentToBeDragged = false;
+			
+			if(answerCheck)checkAnswers();	
+			
+			return;
+		}	
+		if(contentToBeDragged_next){
+			contentToBeDragged_src.insertBefore(contentToBeDragged,contentToBeDragged_next);
+		}else{
+			contentToBeDragged_src.appendChild(contentToBeDragged);
+		}
+		contentToBeDragged = false;
+		dragDropIndicator.style.display='none';
+		if(indicateDestinationBox){
+			indicateDestinationBox.style.display='none';
+			document.body.appendChild(indicateDestinationBox);
+			
+		}		
+		mouseoverObj = false;
+		
+	}
+	
+	/* 
+	Preparing data to be saved 
+	*/
+	function saveDragDropNodes()
+	{
+		var saveString = "";
+		var uls = dragDropTopContainer.getElementsByTagName('UL');
+		for(var no=0;no<uls.length;no++){	// LOoping through all <ul>
+			var lis = uls[no].getElementsByTagName('LI');
+			for(var no2=0;no2<lis.length;no2++){
+				if(saveString.length>0)saveString = saveString + ";";
+				saveString = saveString + uls[no].id + '|' + lis[no2].id;
+			}	
+		}		
+		
+		document.getElementById('saveContent').innerHTML = '<h1>Ready to save these nodes:</h1> ' + saveString.replace(/;/g,';<br>') + '<p>Format: ID of ul |(pipe) ID of li;(semicolon)</p><p>You can put these values into a hidden form fields, post it to the server and explode the submitted value there</p>';
+		
+	}
+	
+	function initDragDropScript()
+	{
+		dragContentObj = document.getElementById('dragContent');
+		dragDropIndicator = document.getElementById('dragDropIndicator');
+		dragDropTopContainer = document.getElementById('dhtmlgoodies_dragDropContainer');
+		document.documentElement.onselectstart = cancelEvent;;
+		var listItems = dragDropTopContainer.getElementsByTagName('LI');	// Get array containing all <LI>
+		var itemHeight = false;
+		for(var no=0;no<listItems.length;no++){
+			listItems[no].onmousedown = initDrag;
+			listItems[no].onselectstart = cancelEvent;
+			if(!itemHeight)itemHeight = listItems[no].offsetHeight;
+			if(MSIE && navigatorVersion/1<6){
+				listItems[no].style.cursor='hand';
+			}			
+		}
+		
+		var mainContainer = document.getElementById('dhtmlgoodies_mainContainer');
+		var uls = mainContainer.getElementsByTagName('UL');
+		itemHeight = itemHeight + verticalSpaceBetweenListItems;
+		for(var no=0;no<uls.length;no++){
+			uls[no].style.height = itemHeight * boxSizeArray[no]  + 'px';
+			destinationBoxes[destinationBoxes.length] = uls[no];
+		}
+		
+		var leftContainer = document.getElementById('dhtmlgoodies_listOfItems');
+		var itemBox = leftContainer.getElementsByTagName('UL')[0];
+		
+		document.documentElement.onmousemove = moveDragContent;	// Mouse move event - moving draggable div
+		document.documentElement.onmouseup = dragDropEnd;	// Mouse move event - moving draggable div
+		
+		var ulArray = dragDropTopContainer.getElementsByTagName('UL');
+		for(var no=0;no<ulArray.length;no++){
+			ulPositionArray[no] = new Array();
+			ulPositionArray[no]['left'] = getLeftPos(ulArray[no]);	
+			ulPositionArray[no]['top'] = getTopPos(ulArray[no]);	
+			ulPositionArray[no]['width'] = ulArray[no].offsetWidth;
+			ulPositionArray[no]['height'] = ulArray[no].clientHeight;
+			ulPositionArray[no]['obj'] = ulArray[no];
+		}
+		
+		if(initShuffleItems){
+			var allItemsObj = document.getElementById('allItems');
+			var initItems = allItemsObj.getElementsByTagName('LI');
+			
+			for(var no=0;no<(initItems.length*10);no++){
+				var itemIndex = Math.floor(Math.random()*initItems.length);
+				allItemsObj.appendChild(initItems[itemIndex]);
+			}
+		}
+		if(!indicateDestionationByUseOfArrow){
+			indicateDestinationBox = document.createElement('LI');
+			indicateDestinationBox.id = 'indicateDestination';
+			indicateDestinationBox.style.display='none';
+			document.body.appendChild(indicateDestinationBox);
+		}		
+		
+	}
+	
+	window.onload = initDragDropScript;
+	//-->
+	</script>
+
+</head>
+
+<body>
+<div id="main">
+ <div>
+	<h1>LELA10172 Introduction to Historical Linguistics</h1>
+ </div>
+ <div>
+  <div id="menu">
+   <ul>
+    <li><a class="first" href="index.html">Resources Home</a></li>
+    <li><a class="current" href="chron1.html">Exercise 1</a></li>
+   </ul>
+  </div>
+  <div id="content">
+<p>This exercise is about the relative chronology of sound changes, i.e. the order in which they happen. The IPA forms in the table on the left illustrate a number of sound changes between an earlier and a later stage of hypothetical language Lul.</p>
+
+<p>On the right hand side, a number of possible sound changes are given. Click and drag the relevant ones into the correct order in the boxes on the right. (You need to have JavaScript enabled in order for this to work.) There are five changes in total. When you get the order right, a message will pop up.</p>
+
+<table border="0"><tr><td>
+<table>
+ <tr>
+  <td>&nbsp;</td>
+  <td>Old Lul</td>
+  <td>Modern Lul</td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td>1)</td>
+  <td>g&#593;bid</td>
+  <td>&#611;&#596;&beta;&#603;r</td>
+  <td>'to ice-skate'</td>
+ </tr>
+ <tr>
+  <td>2)</td>
+  <td>druz</td>
+  <td>zr&#596;r</td>
+  <td>'idiot'</td>
+ </tr>
+ <tr>
+  <td>3)</td>
+  <td>g&#593;big</td>
+  <td>&#611;e&beta;i&#611;</td>
+  <td>'turtleneck'</td>
+ </tr>
+ <tr>
+  <td>4)</td>
+  <td>ir&#593;did</td>
+  <td>&#603;r&#596;z&#603;r</td>
+  <td>'to worsen'</td>
+ </tr>
+ <tr>
+  <td>5)</td>
+  <td>&#593;lig&#593;</td>
+  <td>eli&#611;&#596;</td>
+  <td>'mammoth'</td>
+ </tr>
+ <tr>
+  <td>6)</td>
+  <td>lurinu</td>
+  <td>l&#596;rinu</td>
+  <td>'aubergine'</td>
+ </tr>
+ <tr>
+  <td>7)</td>
+  <td>b&#593;dri</td>
+  <td>&beta;&#596;zri</td>
+  <td>'yellow'</td>
+ </tr>
+ <tr>
+  <td>8)</td>
+  <td>n&#593;ri</td>
+  <td>neri</td>
+  <td>'purple'</td>
+ </tr>
+</table>
+</td>
+
+<td><div id="dhtmlgoodies_dragDropContainer">
+	<div id="dhtmlgoodies_listOfItems">
+		<div>
+			<p>Sound changes</p>		
+		<ul id="allItems">
+			<li id="node1" groupId="box2">z &#62; r &#47; __ &#35;</li>
+			<li id="node2" groupId="allItems">p &#62; pf &#47; __ &#35;</li>
+			<li id="node3" groupId="box3">i, u &#62; &#603;, &#596; &#47; __ r</li>
+			<li id="node4" groupId="box5">&#593; &#62; &#596;</li>
+			<li id="node5" groupId="box4">&#593; &#62; e &#47; __ Ci</li>
+			<li id="node6" groupId="allItems">b, d, g &#62; &beta;, z, &#611; &#47; V __ V</li>
+			<li id="node7" groupId="box1">b, d, g &#62; &beta;, z, &#611;</li>
+			<li id="node8" groupId="allItems">&#596; &#62; e &#47; __ Ci</li>
+			<li id="node9" groupId="allItems">d &#62; r &#47; __ &#35;</li>			
+			<li id="node10" groupId="allItems">h &#62; q</li>
+			<li id="node11" groupId="allItems">&#593; &#62; e &#47; __ CCi</li>
+			<li id="node12" groupId="allItems">i &#62; &#603;</li>			
+			
+		</ul>
+		</div>
+	</div>	
+	<div id="dhtmlgoodies_mainContainer">
+		<!-- ONE <UL> for each "room" -->
+		<div>
+			<p>1</p>
+			<ul id="box1">
+			</ul>
+		</div>
+		<div>		
+			<p>2</p>
+			<ul id="box2"></ul>
+		</div>
+		<div>
+			<p>3</p>
+			<ul id="box3">
+			</ul>
+		</div>
+		<div>
+			<p>4</p>
+			<ul id="box4"></ul>
+		</div>
+		<div>	
+			<p>5</p>
+			<ul id="box5">
+			</ul>
+		</div>		
+	</div>
+</div>
+<ul id="dragContent"></ul>
+<div id="dragDropIndicator"><img src="images/insert.gif" alt="insert" /></div>
+<div id="saveContent"></div>
+</td></tr></table>
+
+<p>This exercise is based on a script by Alf Magne Kalleland and found at <a href="http://www.dhtmlgoodies.com/index.html?whichScript=drag-drop-nodes-quiz">dhtmlgoodies.com</a>. Thanks, Alf. (<a href="http://www.youtube.com/watch?v=9jtU9BbReQk">Thalf</a>.)</p>
+
+<p>My main website is <a href="http://personalpages.manchester.ac.uk/staff/george.walkden/">here</a>.</p>
+  </div>
+ </div>
+<small>&nbsp;<br />&copy; <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#111;&#114;&#103;&#101;&#46;&#119;&#97;&#108;&#107;&#100;&#101;&#110;&#64;&#109;&#97;&#110;&#99;&#104;&#101;&#115;&#116;&#101;&#114;&#46;&#97;&#99;&#46;&#117;&#107;">George Walkden</a>, 2009-.
+<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+alt="Valid CSS!" height="31" width="88" style="float: right" /></a>
+<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10-blue"
+alt="Valid XHTML 1.0 Strict" height="31" width="88" style="float: right"/></a>
+<br /><script type="text/javascript" src="../datemod.js"></script></small>
+</div>
+</body>
+</html>
