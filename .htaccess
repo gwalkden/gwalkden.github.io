@@ -1,3 +1,4 @@
 RewriteEngine On
 
 RewriteRule ^digs/(.*)$ /DiGS/$1 [R=301,L]
+RewriteRule ^digs /DiGS [R=301,L]
